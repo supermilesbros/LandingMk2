@@ -1,5 +1,5 @@
 <template>
-  <v-stepper class="stepper-container" :items="['Personal Info', 'Visit Date', 'Step 3']">
+  <v-stepper class="stepper-container" :items="['Personal Info', 'Visit Date', 'Thank You']">
   <template v-slot:item.1>
     <v-card class="h-100" title="Personal Info" flat>
       <v-form @submit.prevent="submit">
@@ -48,7 +48,12 @@
 
   <template v-slot:item.3>
     <v-card title="Thank You for Scheduling" flat>
-      You will receve a confirmation email with the details of your appointment.
+      <p>You will receve a confirmation email with the details of your appointment.</p>
+      <h5 class="mt-5">Grand Park</h5>
+      <p>200 E 186th St A, Westfield, IN 46074</p>
+      <h5 class="mt-5">Carmel</h5>
+      <p>20 Executive Dr suite g, Carmel, IN 46032</p>
+      
     </v-card>
   </template>
 </v-stepper>
