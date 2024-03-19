@@ -29,18 +29,18 @@
   <template v-slot:item.2>
     <v-card title="Location & Date" flat>
       <v-form @submit.prevent="submit">
-        <v-text-field
-          v-model="location"
-          :rules="[ruleRequired]"
+        <v-select
           label="Location"
-          required
-        ></v-text-field>
-        <v-date-picker
-          v-model="date"
-          :rules="[ruleRequired]"
-          label="Date"
-          required
-        ></v-date-picker>
+          :items="['Westfield - Grand Park', 'Carmel',]"
+        ></v-select>
+        <v-select
+          label="Day"
+          :items="['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']"
+        ></v-select>
+        <v-select
+          label="Time"
+          :items="['11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm']"
+        ></v-select>
       </v-form>
     </v-card>
   </template>
