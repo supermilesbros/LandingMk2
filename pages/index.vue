@@ -46,7 +46,9 @@
   </template>
 
   <template v-slot:item.3>
-    <v-card title="SomethingS" flat>...</v-card>
+    <v-card title="Thank You for Scheduling" flat>
+      You will receve a confirmation email with the details of your appointment.
+    </v-card>
   </template>
 </v-stepper>
 </template>
