@@ -58,7 +58,7 @@ const password = ref("");
 const formData = ({
   name: "",
   email: "",
-  phone: "",
+  phone: "", 6
   location: "",
   date: "",
 });
