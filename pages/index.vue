@@ -1,5 +1,5 @@
 <template>
-  <v-stepper class="stepper-container" :items="['Personal Info', 'Visit Date', 'Thank You']">
+  <v-stepper class="stepper-container" :items="['Personal Info', 'Visit Date', 'Thank You']" mobile>
   <template v-slot:item.1>
     <v-card class="h-100" title="Personal Info" flat>
       <v-form @submit.prevent="submit">
