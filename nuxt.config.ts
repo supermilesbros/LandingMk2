@@ -1,11 +1,11 @@
 import vuetify from "vite-plugin-vuetify";
 
 // PWA Config
-const title = "Vuetify 3 + Nuxt 3 Starter";
-const shortTitle = "Vuetify 3 + Nuxt 3 Starter";
-const description = "Template to get you up and running with Nuxt 3 & Vuetify 3";
-const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
-const url = "https://vuetify3nuxt3starter.behonbaker.com/";
+const title = "Proteam X Recovery Room";
+const shortTitle = "Proteam X Recovery Room";
+const description = "This is a simple form app for Proteam X Recovery Room.";
+const image = "";
+const url = "";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -27,8 +27,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Vuetify 3 + Nuxt 3 Starter",
-      titleTemplate: "%s | Vuetify 3 + Nuxt 3 Starter",
+      title: "Proteam X Recovery Room",
+      titleTemplate: "%s | Proteam X Recovery Room",  
       link: [
         { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
         { rel: "preconnect", href: "https://rsms.me/" },
