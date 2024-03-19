@@ -1,0 +1,1 @@
+export { default } from "file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
