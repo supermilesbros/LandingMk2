@@ -41,7 +41,7 @@
           label="Time"
           :items="['11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm']"
         ></v-select>
-        <v-btn @click="submit" color="primary" block>Submit</v-btn>
+        <v-btn @click="submit" color="light-blue-lighten-2" block>Submit</v-btn>
       </v-form>
     </v-card>
   </template>
