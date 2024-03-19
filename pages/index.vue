@@ -4,19 +4,19 @@
     <v-card class="h-100" title="Personal Info" flat>
       <v-form @submit.prevent="submit">
         <v-text-field
-          v-model="formData.name"
+          v-model="name"
           :rules="[ruleRequired]"
           label="Name"
           required
         ></v-text-field>
         <v-text-field
-          v-model="formData.email"
+          v-model="email"
           :rules="[ruleRequired, ruleEmail]"
           label="Email"
           required
         ></v-text-field>
         <v-text-field
-          v-model="formData.phone"
+          v-model="phone"
           :rules="[ruleRequired]"
           label="Phone Number"
           required
@@ -30,13 +30,13 @@
     <v-card title="Location & Date" flat>
       <v-form @submit.prevent="submit">
         <v-text-field
-          v-model="formData.location"
+          v-model="location"
           :rules="[ruleRequired]"
           label="Location"
           required
         ></v-text-field>
         <v-date-picker
-          v-model="formData.date"
+          v-model="date"
           :rules="[ruleRequired]"
           label="Date"
           required
