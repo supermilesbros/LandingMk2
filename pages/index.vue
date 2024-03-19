@@ -62,6 +62,8 @@
 <script setup>
 const email = ref("");
 const password = ref("");
+const name = ref("");
+const phone = ref("");
 
 
 
