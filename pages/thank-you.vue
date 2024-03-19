@@ -1,7 +1,7 @@
 <template >
     <div class="TYcard-container">
         <v-card class="TYcard rounded-lg" elevation="16" elevated>
-            <v-card-title class="TYcard-title">Thank You for Scheduling</v-card-title>
+            <h4 class="TYcard-title">Thank You for Scheduling</h4>
             <p class="TYcard-subtitle">You will receve a confirmation email with the details of your appointment.</p>
             <v-card-text>
                 <h5 class="mt-5 mapTagTitle">Grand Park</h5>
