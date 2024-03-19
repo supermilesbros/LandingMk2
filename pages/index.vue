@@ -49,10 +49,10 @@
   <template v-slot:item.3>
     <v-card title="Thank You for Scheduling" flat>
       <p>You will receve a confirmation email with the details of your appointment.</p>
-      <h5 class="mt-5">Grand Park</h5>
-      <p>200 E 186th St A, Westfield, IN 46074</p>
-      <h5 class="mt-5">Carmel</h5>
-      <p>20 Executive Dr suite g, Carmel, IN 46032</p>
+      <h5 class="mt-5 mapTagTitle">Grand Park</h5>
+      <a class="mapTag" href="https://maps.app.goo.gl/SYcqJeE3YXHXdDqq8" target="_blank">200 E 186th St A, Westfield, IN 46074</a>
+      <h5 class="mt-5 mapTagTitle">Carmel</h5>
+      <a class="mapTag" href="https://maps.app.goo.gl/6vGgZuTXhi8pn5XP9" target="_blank">20 Executive Dr suite g, Carmel, IN 46032</a>
       
     </v-card>
   </template>
@@ -74,5 +74,14 @@ const submit = async () => {};
   max-width: 100%;
   margin: 0 auto;
   height: 100%;
+}
+.mapTagTitle {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.mapTag {
+  color: #00ccff;
+  text-decoration: underline;
 }
 </style>
