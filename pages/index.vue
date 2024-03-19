@@ -55,13 +55,7 @@
 const email = ref("");
 const password = ref("");
 
-const formData = ({
-  name: "",
-  email: "",
-  phone: "", 6
-  location: "",
-  date: "",
-});
+
 
 const { ruleEmail, rulePassLen, ruleRequired } = useFormRules();
 
