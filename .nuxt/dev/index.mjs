@@ -1,9 +1,9 @@
-import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { Server } from 'node:http';
+globalThis._importMeta_={url:import.meta.url,env:process.env};import { Server } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getQuery as getQuery$1, readBody, getResponseStatusText } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, getQuery as getQuery$1, createError, getResponseStatusText } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/h3/dist/index.mjs';
 import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { stringify, uneval } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/devalue/index.js';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/ufo/dist/index.mjs';
@@ -13,8 +13,8 @@ import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///User
 import destr from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/destr/dist/index.mjs';
 import { createCall, createFetch } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/unenv/runtime/fetch/index.mjs';
 import { createHooks } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/hookable/dist/index.mjs';
-import { klona } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/klona/dist/index.mjs';
 import { snakeCase } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/scule/dist/index.mjs';
+import { klona } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/klona/dist/index.mjs';
 import defu, { defuFn } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/defu/dist/defu.mjs';
 import { hash } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/ohash/dist/index.mjs';
 import { createStorage, prefixStorage } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/unstorage/dist/index.mjs';
@@ -25,44 +25,6 @@ import { createServerHead as createServerHead$1 } from 'file:///Users/jaredmiles
 import { defineHeadPlugin } from 'file:///Users/jaredmiles/Documents/Clients/Recovery%20Room/LandingMk2/node_modules/@unhead/shared/dist/index.mjs';
 
 const r=Object.create(null),E=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return E()[o]??r[o]},has(e,o){const i=E();return o in i||o in r},set(e,o,i){const g=E(!0);return g[o]=i,!0},deleteProperty(e,o){if(!o)return !1;const i=E(!0);return delete i[o],!0},ownKeys(){const e=E(!0);return Object.keys(e)}}),t=typeof process<"u"&&process.env&&"development"||"",p=[["APPVEYOR"],["AWS_AMPLIFY","AWS_APP_ID",{ci:!0}],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"],["ZEABUR"],["CODESPHERE","CODESPHERE_APP_ID",{ci:!0}],["RAILWAY","RAILWAY_PROJECT_ID"],["RAILWAY","RAILWAY_SERVICE_ID"]];function B(){if(globalThis.process?.env)for(const e of p){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const l=B(),d=l.name;function n(e){return e?e!=="false":!1}const I=globalThis.process?.platform||"",T=n(s.CI)||l.ci!==!1,R=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const C=t==="test"||n(s.TEST);n(s.MINIMAL)||T||C||!R;const a=/^win/i.test(I);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||(R||a)&&s.TERM!=="dumb"||T);const _=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(_?.split(".")[0])||null;const W=globalThis.process||Object.create(null),c={versions:{}};new Proxy(W,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in c)return c[o]}});const A=globalThis.process?.release?.name==="node",L=!!globalThis.Bun||!!globalThis.process?.versions?.bun,D=!!globalThis.Deno,O=!!globalThis.fastly,S=!!globalThis.Netlify,N=!!globalThis.EdgeRuntime,u=globalThis.navigator?.userAgent==="Cloudflare-Workers",b=!!globalThis.__lagon__,F=[[S,"netlify"],[N,"edge-light"],[u,"workerd"],[O,"fastly"],[D,"deno"],[L,"bun"],[A,"node"],[b,"lagon"]];function G(){const e=F.find(o=>o[0]);if(e)return {name:e[1]}}const P=G();P?.name||"";
-
-function getEnv(key, opts) {
-  const envKey = snakeCase(key).toUpperCase();
-  return destr(
-    process.env[opts.prefix + envKey] ?? process.env[opts.altPrefix + envKey]
-  );
-}
-function _isObject(input) {
-  return typeof input === "object" && !Array.isArray(input);
-}
-function applyEnv(obj, opts, parentKey = "") {
-  for (const key in obj) {
-    const subKey = parentKey ? `${parentKey}_${key}` : key;
-    const envValue = getEnv(subKey, opts);
-    if (_isObject(obj[key])) {
-      if (_isObject(envValue)) {
-        obj[key] = { ...obj[key], ...envValue };
-        applyEnv(obj[key], opts, subKey);
-      } else if (envValue === void 0) {
-        applyEnv(obj[key], opts, subKey);
-      } else {
-        obj[key] = envValue ?? obj[key];
-      }
-    } else {
-      obj[key] = envValue ?? obj[key];
-    }
-    if (opts.envExpansion && typeof obj[key] === "string") {
-      obj[key] = _expandFromEnv(obj[key]);
-    }
-  }
-  return obj;
-}
-const envExpandRx = /{{(.*?)}}/g;
-function _expandFromEnv(value) {
-  return value.replace(envExpandRx, (match, key) => {
-    return process.env[key] || match;
-  });
-}
 
 const inlineAppConfig = {
   "nuxt": {
@@ -197,13 +159,10 @@ const _inlineRuntimeConfig = {
     }
   }
 };
-const envOptions = {
-  prefix: "NITRO_",
-  altPrefix: _inlineRuntimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_",
-  envExpansion: _inlineRuntimeConfig.nitro.envExpansion ?? process.env.NITRO_ENV_EXPANSION ?? false
-};
+const ENV_PREFIX = "NITRO_";
+const ENV_PREFIX_ALT = _inlineRuntimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const _sharedRuntimeConfig = _deepFreeze(
-  applyEnv(klona(_inlineRuntimeConfig), envOptions)
+  _applyEnv(klona(_inlineRuntimeConfig))
 );
 function useRuntimeConfig(event) {
   if (!event) {
@@ -213,11 +172,35 @@ function useRuntimeConfig(event) {
     return event.context.nitro.runtimeConfig;
   }
   const runtimeConfig = klona(_inlineRuntimeConfig);
-  applyEnv(runtimeConfig, envOptions);
+  _applyEnv(runtimeConfig);
   event.context.nitro.runtimeConfig = runtimeConfig;
   return runtimeConfig;
 }
 _deepFreeze(klona(appConfig));
+function _getEnv(key) {
+  const envKey = snakeCase(key).toUpperCase();
+  return destr(
+    process.env[ENV_PREFIX + envKey] ?? process.env[ENV_PREFIX_ALT + envKey]
+  );
+}
+function _isObject(input) {
+  return typeof input === "object" && !Array.isArray(input);
+}
+function _applyEnv(obj, parentKey = "") {
+  for (const key in obj) {
+    const subKey = parentKey ? `${parentKey}_${key}` : key;
+    const envValue = _getEnv(subKey);
+    if (_isObject(obj[key])) {
+      if (_isObject(envValue)) {
+        obj[key] = { ...obj[key], ...envValue };
+      }
+      _applyEnv(obj[key], subKey);
+    } else {
+      obj[key] = envValue ?? obj[key];
+    }
+  }
+  return obj;
+}
 function _deepFreeze(object) {
   const propNames = Object.getOwnPropertyNames(object);
   for (const name of propNames) {
@@ -278,13 +261,7 @@ function defineCachedFunction(fn, opts = {}) {
   const validate = opts.validate || ((entry) => entry.value !== void 0);
   async function get(key, resolver, shouldInvalidateCache, event) {
     const cacheKey = [opts.base, group, name, key + ".json"].filter(Boolean).join(":").replace(/:\/$/, ":index");
-    let entry = await useStorage().getItem(cacheKey) || {};
-    if (typeof entry !== "object") {
-      entry = {};
-      const error = new Error("Malformed data read from cache.");
-      console.error("[nitro] [cache]", error);
-      useNitroApp().captureError(error, { event, tags: ["cache"] });
-    }
+    const entry = await useStorage().getItem(cacheKey) || {};
     const ttl = (opts.maxAge ?? opts.maxAge ?? 0) * 1e3;
     if (ttl) {
       entry.expires = Date.now() + ttl;
@@ -340,12 +317,12 @@ function defineCachedFunction(fn, opts = {}) {
     return _resolvePromise.then(() => entry);
   }
   return async (...args) => {
-    const shouldBypassCache = await opts.shouldBypassCache?.(...args);
+    const shouldBypassCache = opts.shouldBypassCache?.(...args);
     if (shouldBypassCache) {
       return fn(...args);
     }
     const key = await (opts.getKey || getKey)(...args);
-    const shouldInvalidateCache = await opts.shouldInvalidateCache?.(...args);
+    const shouldInvalidateCache = opts.shouldInvalidateCache?.(...args);
     const entry = await get(
       key,
       () => fn(...args),
@@ -470,12 +447,6 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
         }
       });
       const event = createEvent(reqProxy, resProxy);
-      event.fetch = (url, fetchOptions) => fetchWithEvent(event, url, fetchOptions, {
-        fetch: useNitroApp().localFetch
-      });
-      event.$fetch = (url, fetchOptions) => fetchWithEvent(event, url, fetchOptions, {
-        fetch: globalThis.$fetch
-      });
       event.context = incomingEvent.context;
       const body = await handler(event) || _resSendBody;
       const headers = event.node.res.getHeaders();
@@ -646,19 +617,11 @@ function createRouteRulesHandler(ctx) {
       setHeaders(event, routeRules.headers);
     }
     if (routeRules.redirect) {
-      let target = routeRules.redirect.to;
-      if (target.endsWith("/**")) {
-        let targetPath = event.path;
-        const strpBase = routeRules.redirect._redirectStripBase;
-        if (strpBase) {
-          targetPath = withoutBase(targetPath, strpBase);
-        }
-        target = joinURL(target.slice(0, -3), targetPath);
-      } else if (event.path.includes("?")) {
-        const query = getQuery(event.path);
-        target = withQuery(target, query);
-      }
-      return sendRedirect(event, target, routeRules.redirect.statusCode);
+      return sendRedirect(
+        event,
+        routeRules.redirect.to,
+        routeRules.redirect.statusCode
+      );
     }
     if (routeRules.proxy) {
       let target = routeRules.proxy.to;
@@ -744,43 +707,6 @@ const plugins = [
   _x4lkl278rw,
 _rYO4GhmOD9
 ];
-
-const scheduledTasks = false;
-
-const tasks = {
-  
-};
-
-const __runningTasks__ = {};
-async function runTask(name, {
-  payload = {},
-  context = {}
-} = {}) {
-  if (__runningTasks__[name]) {
-    return __runningTasks__[name];
-  }
-  if (!(name in tasks)) {
-    throw createError({
-      message: `Task \`${name}\` is not available!`,
-      statusCode: 404
-    });
-  }
-  if (!tasks[name].resolve) {
-    throw createError({
-      message: `Task \`${name}\` is not implemented!`,
-      statusCode: 501
-    });
-  }
-  const handler = await tasks[name].resolve();
-  const taskEvent = { name, payload, context };
-  __runningTasks__[name] = handler.run(taskEvent);
-  try {
-    const res = await __runningTasks__[name];
-    return res;
-  } finally {
-    delete __runningTasks__[name];
-  }
-}
 
 function defineRenderHandler(handler) {
   return eventHandler(async (event) => {
@@ -1038,32 +964,6 @@ server.listen(listenAddress, () => {
     address: typeof _address === "string" ? { socketPath: _address } : { host: "localhost", port: _address.port }
   });
 });
-nitroApp.router.get(
-  "/_nitro/tasks",
-  defineEventHandler(async (event) => {
-    const _tasks = await Promise.all(
-      Object.entries(tasks).map(async ([name, task]) => {
-        const _task = await task.resolve?.();
-        return [name, { description: _task?.meta?.description }];
-      })
-    );
-    return {
-      tasks: Object.fromEntries(_tasks),
-      scheduledTasks
-    };
-  })
-);
-nitroApp.router.use(
-  "/_nitro/tasks/:name",
-  defineEventHandler(async (event) => {
-    const name = getRouterParam(event, "name");
-    const payload = {
-      ...getQuery$1(event),
-      ...await readBody(event).then((r) => r?.payload).catch(() => ({}))
-    };
-    return await runTask(name, { payload });
-  })
-);
 trapUnhandledNodeErrors();
 async function onShutdown(signal) {
   await nitroApp.hooks.callHook("close");

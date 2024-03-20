@@ -23,6 +23,7 @@
     "vuetify": "^3.5.8"
   },
   "dependencies": {
+    "firebase": "^10.9.0",
     "vite-plugin-vuetify": "^2.0.3"
   }
 }

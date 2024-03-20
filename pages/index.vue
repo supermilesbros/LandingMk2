@@ -31,19 +31,38 @@
       <v-form @submit.prevent="submit">
         <v-select
           label="Location"
+          v-model="location"
           :items="['Westfield - Grand Park', 'Carmel',]"
         ></v-select>
+        <v-btn class="mb-5 dateBtn" @click="toggleDatePicker" size='large' color="#00ccff" prepend-icon="$calendar" tonal block>Select A Date</v-btn>
         <v-select
           label="Day"
+          v-model="day"
           :items="['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']"
         ></v-select>
         <v-select
           label="Time"
+          v-model="time"
           :items="['11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm']"
         ></v-select>
         <v-btn @click="submit" color="light-blue-lighten-2" block>Submit</v-btn>
       </v-form>
     </v-card>
+    <v-dialog
+      v-model="dialog"
+      width="auto"
+    >
+      <v-card>
+      <v-date-picker v-model="date" no-title></v-date-picker>
+        <template v-slot:actions>
+          <v-btn
+            class="ms-auto"
+            text="Ok"
+            @click="dialog = false"
+          ></v-btn>
+        </template>
+      </v-card>
+    </v-dialog>
   </template>
 
   <!-- <template v-slot:item.3>
@@ -60,15 +79,36 @@
 </template>
 
 <script setup>
+import { collection, setDoc, addDoc, doc, onSnapshot } from "firebase/firestore";
+import { auth, db, getCurrentUser } from "~/firebase/firebase";
+
 const router = useRouter();
+
+const dialog = ref(false);
+
+const toggleDatePicker = () => {
+  dialog.value = !dialog.value;
+};
 
 const email = ref("");
 const password = ref("");
 const name = ref("");
 const phone = ref("");
+const time = ref("");
+const location = ref("");
+const date = ref();
 
-const submit = () => {
-  console.log("submit");
+const submit = async () => {
+  console.log("submit", date.value);
+  await addDoc(collection(db, "mail"), {
+    email: email.value,
+    name: name.value,
+    phone: phone.value,
+    location: location.value,
+    time: time.value,
+    date: date.value,
+  });
+  
     router.push("/thank-you");
 }
 
@@ -90,5 +130,8 @@ const { ruleEmail, rulePassLen, ruleRequired } = useFormRules();
 .mapTag {
   color: #00ccff;
   text-decoration: underline;
+}
+.dateBtn {
+  text-align: left;
 }
 </style>
