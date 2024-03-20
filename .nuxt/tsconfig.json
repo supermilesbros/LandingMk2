@@ -87,6 +87,7 @@
   },
   "include": [
     "./nuxt.d.ts",
+    "../.config/nuxt.*",
     "../**/*",
     "../node_modules/@kevinmarrec/nuxt-pwa/runtime",
     "../node_modules/@nuxt/devtools/runtime",
