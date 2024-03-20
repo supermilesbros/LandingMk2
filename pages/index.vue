@@ -45,14 +45,19 @@
     </v-card>
     <v-dialog
       v-model="dialog"
-      width="auto"
+      transition="dialog-bottom-transition"
     >
       <v-card>
-      <v-date-picker v-model="date" no-title></v-date-picker>
+        <v-container>
+          <v-row justify="space-around">
+            <v-date-picker v-model="date" no-title width="full"
+            ></v-date-picker>
+          </v-row>
+        </v-container>
         <template v-slot:actions>
           <v-btn
             class="ms-auto"
-            text="Ok"
+            text="Save"
             @click="dialog = false"
           ></v-btn>
         </template>
