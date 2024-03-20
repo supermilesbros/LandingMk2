@@ -102,7 +102,7 @@ const date = ref();
 const submit = async () => {
   console.log("submit", date.value);
   await addDoc(collection(db, "mail"), {
-    to: ['jaredm791@gmail.com', 'konnie@recoveryroomusa.com'],
+    to: ['jaredm791@gmail.com', 'konnie@recoveryroomusa.com','mreynolds@proteamwellness.com'],
     message: {
       subject: "New Appointment",
       text: `Name: ${name.value} \n Email: ${email.value} \n Phone: ${phone.value} \n Location: ${location.value} \n Time: ${time.value} \n Date: ${date.value}`,
