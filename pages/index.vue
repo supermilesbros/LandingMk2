@@ -36,11 +36,6 @@
         ></v-select>
         <v-btn class="mb-5 dateBtn" @click="toggleDatePicker" size='large' color="#00ccff" prepend-icon="$calendar" tonal block>Select A Date</v-btn>
         <v-select
-          label="Day"
-          v-model="day"
-          :items="['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']"
-        ></v-select>
-        <v-select
           label="Time"
           v-model="time"
           :items="['11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm']"
