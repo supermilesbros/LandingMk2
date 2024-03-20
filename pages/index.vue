@@ -45,12 +45,13 @@
     </v-card>
     <v-dialog
       v-model="dialog"
+      fullscreen
       transition="dialog-bottom-transition"
     >
       <v-card>
-        <v-container>
-          <v-row justify="space-around">
-            <v-date-picker v-model="date" no-title width="full"
+        <v-container >
+          <v-row justify="space-around" align="center">
+            <v-date-picker v-model="date" no-title
             ></v-date-picker>
           </v-row>
         </v-container>
